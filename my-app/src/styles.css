@@ -1,0 +1,19 @@
+body { 
+  margin : 0; 
+  padding : 0; 
+  font-family: 'Karla', sans-serif;
+}
+
+.nav-bar {
+  background: linear-gradient(to right,#FFA07A, #FF6347);
+  display: flex;
+  color: white;
+  font-family: 'Akaya Telivigala', cursive;
+  font-size: 20px;
+  align-items: center;
+}
+
+.logo {
+  width: 90px;
+  padding: 5px 20px
+}
