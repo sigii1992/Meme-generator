@@ -1,9 +1,13 @@
 import Header from './components/Header'
+import Meme from './components/Meme'
 import './styles.css'
 
 function App() {
   return (
-    <Header />
+    <div>
+      <Header />
+      <Meme />
+    </div>
   );
 }
 

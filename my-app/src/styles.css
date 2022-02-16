@@ -4,6 +4,10 @@ body {
   font-family: 'Karla', sans-serif;
 }
 
+main {
+  padding: 50px
+}
+
 .nav-bar {
   background: linear-gradient(to right,#FFA07A, #FF6347);
   display: flex;
@@ -16,4 +20,32 @@ body {
 .logo {
   width: 90px;
   padding: 5px 20px
+}
+
+.form {
+  display: grid;
+  grid-template: 60px 60px / 1fr 1fr;
+  gap: 25px
+}
+
+.form-input {
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid #FFA07A;
+  text-indent: 5px;
+  outline-color: #FF6347;
+ 
+}
+
+.form-button {
+  grid-column: 1 / -1;
+  background: linear-gradient(to right,#FFA07A, #FF6347);
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
