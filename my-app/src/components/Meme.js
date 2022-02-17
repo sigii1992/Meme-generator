@@ -20,14 +20,45 @@ const Meme = () => {
       }))
   };
 
+  console.log(meme.topText)
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target
+    setMeme(prev => {
+      return {
+        ...prev,
+        [name]: value
+      }
+    })
+  }
+
   return (
     <main>
       <div className="form">
-        <input type="text" name="top-text" placeholder="Top text here..." className="form-input" />
-        <input type="text" name="bottom-text" placeholder="Bottom text here..." className="form-input" />
+        <input 
+        type="text" 
+        name="topText" 
+        placeholder="Top text here..." 
+        className="form-input" 
+        value={meme.topText}
+        onChange={handleChange}
+        />
+        <input 
+        type="text" 
+        name="bottomText" 
+        placeholder="Bottom text here..." 
+        className="form-input" 
+        value={meme.bottomText}
+        onChange={handleChange}
+        />
         <button onClick={getMemeImage} className="form-button">Get a new meme image</button>
       </div>
-      <img src={meme.randomImage} className="meme-image"/>
+      <div className="meme">
+        <img src={meme.randomImage} className="meme-image"/>
+        <h2 className="meme-text top">{meme.topText}</h2>
+        <h2 className="meme-text bottom">{meme.bottomText}</h2>
+      </div>
     </main>
   )  
 }
