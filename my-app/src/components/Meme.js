@@ -10,14 +10,16 @@ const Meme = () => {
 
   const [allMemeImages, setAllMemeImages] = useState(memesData)
 
-  const getMemeImage= (e) => {
-    e.preventDefault();
+  const getMemeImage= () => {
+    // e.preventDefault();
     const memesArray = allMemeImages.data.memes;
     const randomMeme = memesArray[Math.floor(Math.random() * memesArray.length)];
-    setMeme(prev => ({
+    setMeme(prev => {
+      return {
       ...prev,
       randomImage: randomMeme.url
-      }))
+      }
+    })
   };
 
   console.log(meme.topText)
@@ -52,7 +54,11 @@ const Meme = () => {
         value={meme.bottomText}
         onChange={handleChange}
         />
-        <button onClick={getMemeImage} className="form-button">Get a new meme image</button>
+        <button 
+          onClick={getMemeImage} 
+          className="form-button">
+            Get a new meme image
+        </button>
       </div>
       <div className="meme">
         <img src={meme.randomImage} className="meme-image"/>
