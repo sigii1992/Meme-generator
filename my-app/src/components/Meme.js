@@ -40,20 +40,20 @@ const Meme = () => {
     <main>
       <div className="form">
         <input 
-        type="text" 
-        name="topText" 
-        placeholder="Top text here..." 
-        className="form-input" 
-        value={meme.topText}
-        onChange={handleChange}
+          type="text" 
+          name="topText" 
+          placeholder="Top text here..." 
+          className="form-input" 
+          value={meme.topText}
+          onChange={handleChange}
         />
         <input 
-        type="text" 
-        name="bottomText" 
-        placeholder="Bottom text here..." 
-        className="form-input" 
-        value={meme.bottomText}
-        onChange={handleChange}
+          type="text" 
+          name="bottomText" 
+          placeholder="Bottom text here..." 
+          className="form-input" 
+          value={meme.bottomText}
+          onChange={handleChange}
         />
         <button 
           onClick={getMemeImage} 
