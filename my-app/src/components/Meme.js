@@ -19,7 +19,8 @@ const Meme = () => {
     const randomMeme = allMemes[Math.floor(Math.random() * allMemes.length)];
     setMeme(prev => {
       return {
-      ...prev,
+      topText: "",
+      bottomText: "",
       randomImage: randomMeme.url
       }
     })
